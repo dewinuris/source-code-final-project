@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "author": "adila ffw",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp1", "top": -4.9, "left": -53, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -61.2,
+      "left": 387.8,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -61.2,
+      "left": 272.6,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -61.2,
+      "left": 147.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 119.15,
+      "left": 153.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 186.35,
+      "left": 259.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 215.15,
+      "left": 393.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "esp1:GND.1", "led3:C", "green", [ "h0" ] ],
+    [ "led2:C", "esp1:GND.1", "green", [ "v0" ] ],
+    [ "led1:C", "esp1:GND.1", "green", [ "v0" ] ],
+    [ "led1:A", "r3:2", "green", [ "v0", "h38.4", "v201.6" ] ],
+    [ "led2:A", "r2:2", "green", [ "v0", "h38.4", "v201.6" ] ],
+    [ "led3:A", "r1:2", "green", [ "v0", "h48", "v201.6" ] ],
+    [ "esp1:D2", "r1:1", "green", [ "h0" ] ],
+    [ "r2:1", "esp1:D4", "green", [ "h-124.8", "v-67.3" ] ],
+    [ "r3:1", "esp1:D5", "green", [ "h-288", "v-153.6" ] ]
+  ],
+  "dependencies": {}
+}
